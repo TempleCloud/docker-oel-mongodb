@@ -1,6 +1,6 @@
 FROM oraclelinux:7.2
 
-MAINTAINER Timothy Langford <tim.langford@oracle.com>
+MAINTAINER Timothy Langford <tim.langford@gmail.com>
 
 RUN yum install -y net-tools nc curl
 
@@ -23,8 +23,9 @@ RUN yum install -y \
 
 COPY mongodb/etc/mongod.conf /etc/mongod.conf
 
-VOLUME ["/var/lib/mongo"]
+VOLUME ["/var/lib/mongodb"]
 VOLUME ["/var/log/mongodb"]
+VOLUME ["/srv/mongodb"]
 
 EXPOSE 27017
 
